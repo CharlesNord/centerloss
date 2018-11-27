@@ -131,7 +131,7 @@ def test(test_loader, model, epoch):
     total_target = torch.cat(total_target, dim=0)
     total_feature = torch.cat(total_feature, dim=0)
 
-    precision = torch.sum(total_pred_label == total_target) / float(total_target.shape[0])
+    precision = torch.sum(total_pred_label == total_target).item() / float(total_target.shape[0])
     print("Validation accuracy: {}%".format(precision * 100))
     scatter(total_feature.numpy(), total_target.numpy(), epoch)
 
