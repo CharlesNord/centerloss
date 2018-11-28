@@ -16,7 +16,7 @@ trainset = torchvision.datasets.MNIST(root='../mnist', train=True, transform=tra
     [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
 ))
 
-testset = torchvision.datasets.MNIST(root='../mnist', train=True, transform=transforms.Compose(
+testset = torchvision.datasets.MNIST(root='../mnist', train=False, transform=transforms.Compose(
     [transforms.ToTensor(), transforms.Normalize((0.1307,), (0.3081,))]
 ))
 
